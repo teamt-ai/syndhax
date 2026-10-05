@@ -27,128 +27,152 @@
 </head>
 <body>
 
-  <!-- Apple Ambient Lighting -->
+  <!-- Ambient Apple Lighting -->
   <div class="apple-ambient-glow glow-top"></div>
   <div class="apple-ambient-glow glow-bottom"></div>
 
-  <!-- Main Viewport Layout -->
-  <div class="apple-viewport">
+  <!-- Apple Global Navigation Bar -->
+  <header class="apple-nav">
+    <div class="apple-nav-inner">
+      <a href="#" class="apple-nav-brand">
+        <img src="logo.png" alt="syndhax Logo" class="nav-logo-icon">
+        <span class="nav-brand-name">syndhax</span>
+      </a>
+      <a href="https://wa.me/2349161182730?text=Hello%20syndhax!%20I'm%20reaching%20out%20from%20your%20website." class="apple-nav-cta" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Chat on WhatsApp</span>
+        <span class="nav-arrow">›</span>
+      </a>
+    </div>
+  </header>
 
-    <main class="apple-stage">
+  <!-- Page Content -->
+  <div class="apple-page-wrapper">
 
-      <!-- Hero Header -->
-      <section class="apple-hero">
-        
-        <!-- Apple Squircle Icon -->
-        <div class="apple-icon-chassis">
-          <img src="logo.png" alt="syndhax" class="apple-brand-img">
-          <div class="chassis-shine"></div>
+    <!-- Hero Section -->
+    <section class="apple-hero-section">
+      <div class="hero-brand-mark">
+        <img src="logo.png" alt="syndhax Logo" class="hero-logo-img">
+      </div>
+      <h1 class="apple-hero-title">syndhax</h1>
+      <p class="apple-hero-sub">Exactly and beyond<span class="accent-dot">.</span></p>
+
+      <div class="apple-hero-cta-wrap">
+        <a href="https://wa.me/2349161182730?text=Hello%20syndhax!%20I'm%20reaching%20out%20from%20your%20website." class="apple-hero-btn" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Chat on WhatsApp</span>
+          <span class="btn-chevron">›</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Apple Carousel Section (Mobile & Desktop) -->
+    <section class="apple-carousel-section">
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack">
+
+          <!-- Slide 1: Create a Website -->
+          <div class="carousel-slide" data-index="0">
+            <div class="slide-card">
+              <img src="bento-website.jpg" alt="Create a Website" class="slide-bg-img" loading="eager">
+              <div class="slide-scrim"></div>
+              <div class="slide-content">
+                <div class="slide-eyebrow text-cyan">Web Platforms</div>
+                <h2 class="slide-title">Create a Website</h2>
+                <p class="slide-desc">Bespoke web architecture, digital platforms, and ultra-fast responsive design.</p>
+                <div class="slide-action">
+                  <a href="https://wa.me/2349161182730?text=Hello%20syndhax!%20I%20would%20like%20to%20create%20a%20website." class="slide-cta-pill" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Chat on WhatsApp</span>
+                    <span class="arrow">›</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Create an App -->
+          <div class="carousel-slide" data-index="1">
+            <div class="slide-card">
+              <img src="bento-app.jpg" alt="Create an App" class="slide-bg-img" loading="lazy">
+              <div class="slide-scrim"></div>
+              <div class="slide-content">
+                <div class="slide-eyebrow text-purple">Mobile Ecosystems</div>
+                <h2 class="slide-title">Create an App</h2>
+                <p class="slide-desc">Native iOS and Android software engineered for fluid performance.</p>
+                <div class="slide-action">
+                  <a href="https://wa.me/2349161182730?text=Hello%20syndhax!%20I%20would%20like%20to%20create%20an%20app." class="slide-cta-pill" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Chat on WhatsApp</span>
+                    <span class="arrow">›</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Create a Bot -->
+          <div class="carousel-slide" data-index="2">
+            <div class="slide-card">
+              <img src="bento-bot.jpg" alt="Create a Bot" class="slide-bg-img" loading="lazy">
+              <div class="slide-scrim"></div>
+              <div class="slide-content">
+                <div class="slide-eyebrow text-green">Intelligence &amp; AI</div>
+                <h2 class="slide-title">Create a Bot</h2>
+                <p class="slide-desc">Intelligent automation, conversational bots, and WhatsApp business workflows.</p>
+                <div class="slide-action">
+                  <a href="https://wa.me/2349161182730?text=Hello%20syndhax!%20I%20would%20like%20to%20create%20a%20bot." class="slide-cta-pill" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Chat on WhatsApp</span>
+                    <span class="arrow">›</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Discuss a Project -->
+          <div class="carousel-slide" data-index="3">
+            <div class="slide-card">
+              <img src="bento-project.jpg" alt="Discuss a Project" class="slide-bg-img" loading="lazy">
+              <div class="slide-scrim"></div>
+              <div class="slide-content">
+                <div class="slide-eyebrow text-blue">Engineering &amp; Strategy</div>
+                <h2 class="slide-title">Discuss a Project</h2>
+                <p class="slide-desc">Direct technical consultation and architectural planning tailored to your vision.</p>
+                <div class="slide-action">
+                  <a href="https://wa.me/2349161182730?text=Hello%20syndhax!%20I%20would%20like%20to%20discuss%20a%20project." class="slide-cta-pill" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Chat on WhatsApp</span>
+                    <span class="arrow">›</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <h1 class="apple-brand-name">syndhax</h1>
-        <p class="apple-tagline">Exactly and beyond<span class="apple-period">.</span></p>
+        <!-- Apple Carousel Navigation Controls -->
+        <div class="carousel-nav-bar">
+          <button class="carousel-nav-btn prev-btn" id="prevSlideBtn" aria-label="Previous Slide">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          
+          <div class="carousel-dots" id="carouselDots">
+            <button class="dot-btn active" data-index="0" aria-label="Slide 1"></button>
+            <button class="dot-btn" data-index="1" aria-label="Slide 2"></button>
+            <button class="dot-btn" data-index="2" aria-label="Slide 3"></button>
+            <button class="dot-btn" data-index="3" aria-label="Slide 4"></button>
+          </div>
 
-        <!-- Primary Apple-Style Capsule CTA -->
-        <div class="apple-cta-container">
-          <a href="https://wa.me/2349161182730?text=Hello%20syndhax!%20I'm%20reaching%20out%20from%20your%20website." class="apple-cta-capsule" target="_blank" rel="noopener noreferrer">
-            <span class="capsule-icon">
-              <i class="fa-brands fa-whatsapp"></i>
-            </span>
-            <span class="capsule-label">Chat on WhatsApp</span>
-            <span class="capsule-chevron">›</span>
-          </a>
+          <button class="carousel-nav-btn next-btn" id="nextSlideBtn" aria-label="Next Slide">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
         </div>
 
-      </section>
-
-      <!-- Apple Poster Feature Cards (Text Directly on Photorealistic Images) -->
-      <section class="apple-cards-section">
-        <div class="apple-cards-grid">
-
-          <!-- Card 1: Create a Website -->
-          <a href="https://wa.me/2349161182730?text=Hello%20syndhax!%20I%20would%20like%20to%20create%20a%20website." class="apple-poster-card" target="_blank" rel="noopener noreferrer">
-            <img src="bento-website.jpg" alt="Web Development with syndhax" class="poster-bg-img" loading="lazy">
-            <div class="poster-overlay"></div>
-            
-            <div class="poster-content">
-              <div class="poster-top-bar">
-                <span class="poster-eyebrow text-cyan">Web Platforms</span>
-                <span class="poster-wa-badge"><i class="fa-brands fa-whatsapp"></i></span>
-              </div>
-              <div class="poster-bottom-text">
-                <h2 class="poster-title">Create a Website</h2>
-                <p class="poster-desc">Bespoke web architecture, digital platforms, and ultra-fast responsive design.</p>
-                <div class="poster-cta-row">
-                  <span class="poster-cta-pill">Chat on WhatsApp <span class="arrow">›</span></span>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 2: Create an App -->
-          <a href="https://wa.me/2349161182730?text=Hello%20syndhax!%20I%20would%20like%20to%20create%20an%20app." class="apple-poster-card" target="_blank" rel="noopener noreferrer">
-            <img src="bento-app.jpg" alt="Mobile App Development" class="poster-bg-img" loading="lazy">
-            <div class="poster-overlay"></div>
-            
-            <div class="poster-content">
-              <div class="poster-top-bar">
-                <span class="poster-eyebrow text-purple">Mobile Ecosystems</span>
-                <span class="poster-wa-badge"><i class="fa-brands fa-whatsapp"></i></span>
-              </div>
-              <div class="poster-bottom-text">
-                <h2 class="poster-title">Create an App</h2>
-                <p class="poster-desc">Native iOS and Android software engineered for fluid performance.</p>
-                <div class="poster-cta-row">
-                  <span class="poster-cta-pill">Chat on WhatsApp <span class="arrow">›</span></span>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 3: Create a Bot -->
-          <a href="https://wa.me/2349161182730?text=Hello%20syndhax!%20I%20would%20like%20to%20create%20a%20bot." class="apple-poster-card" target="_blank" rel="noopener noreferrer">
-            <img src="bento-bot.jpg" alt="AI & Bot Automation" class="poster-bg-img" loading="lazy">
-            <div class="poster-overlay"></div>
-            
-            <div class="poster-content">
-              <div class="poster-top-bar">
-                <span class="poster-eyebrow text-green">Intelligence &amp; AI</span>
-                <span class="poster-wa-badge"><i class="fa-brands fa-whatsapp"></i></span>
-              </div>
-              <div class="poster-bottom-text">
-                <h2 class="poster-title">Create a Bot</h2>
-                <p class="poster-desc">Intelligent automation, conversational bots, and WhatsApp business workflows.</p>
-                <div class="poster-cta-row">
-                  <span class="poster-cta-pill">Chat on WhatsApp <span class="arrow">›</span></span>
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 4: Discuss a Project -->
-          <a href="https://wa.me/2349161182730?text=Hello%20syndhax!%20I%20would%20like%20to%20discuss%20a%20project." class="apple-poster-card" target="_blank" rel="noopener noreferrer">
-            <img src="bento-project.jpg" alt="Engineering Collaboration" class="poster-bg-img" loading="lazy">
-            <div class="poster-overlay"></div>
-            
-            <div class="poster-content">
-              <div class="poster-top-bar">
-                <span class="poster-eyebrow text-blue">Engineering &amp; Strategy</span>
-                <span class="poster-wa-badge"><i class="fa-brands fa-whatsapp"></i></span>
-              </div>
-              <div class="poster-bottom-text">
-                <h2 class="poster-title">Discuss a Project</h2>
-                <p class="poster-desc">Direct technical consultation and architectural planning tailored to your vision.</p>
-                <div class="poster-cta-row">
-                  <span class="poster-cta-pill">Chat on WhatsApp <span class="arrow">›</span></span>
-                </div>
-              </div>
-            </div>
-          </a>
-
-        </div>
-      </section>
-
-    </main>
+      </div>
+    </section>
 
     <!-- Apple Minimal Footer -->
     <footer class="apple-footer">

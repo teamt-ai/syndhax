@@ -1,12 +1,12 @@
 /* ===================================================================
    syndhax — Designed in the Philosophy of Apple
-   Vision Pro Poster Cards • Text Layered Directly Over Photorealistic Imagery
+   Refined Navigation • Pristine Hero • Cinematic Carousel (Mobile & Desktop)
    =================================================================== */
 
 :root {
   --apple-black: #000000;
   --apple-border: rgba(255, 255, 255, 0.12);
-  --apple-border-hover: rgba(255, 255, 255, 0.3);
+  --apple-border-hover: rgba(255, 255, 255, 0.28);
 
   --apple-text-primary: #f5f5f7;
   --apple-text-secondary: #86868b;
@@ -47,147 +47,189 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Apple Ambient Specular Glows */
+/* Apple Ambient Lighting */
 .apple-ambient-glow {
   position: fixed;
   border-radius: 50%;
-  filter: blur(160px);
+  filter: blur(180px);
   pointer-events: none;
   z-index: 0;
-  opacity: 0.25;
+  opacity: 0.22;
 }
 
 .glow-top {
-  width: 650px;
-  height: 650px;
+  width: 700px;
+  height: 700px;
   background: radial-gradient(circle, rgba(41, 151, 255, 0.35) 0%, transparent 70%);
-  top: -240px;
+  top: -260px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .glow-bottom {
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(191, 90, 242, 0.25) 0%, transparent 70%);
-  bottom: -300px;
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(circle, rgba(191, 90, 242, 0.22) 0%, transparent 70%);
+  bottom: -320px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-/* Viewport Layout */
-.apple-viewport {
-  min-height: 100vh;
+/* Apple Navigation Bar */
+.apple-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 52px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--apple-border);
+  display: flex;
+  align-items: center;
+}
+
+.apple-nav-inner {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.apple-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav-logo-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.nav-brand-name {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--apple-text-primary);
+}
+
+.apple-nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(40, 205, 65, 0.15);
+  border: 1px solid rgba(40, 205, 65, 0.35);
+  color: #30d158;
+  padding: 6px 14px;
+  border-radius: 980px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s var(--apple-easing);
+}
+
+.apple-nav-cta:hover {
+  background: var(--apple-green);
+  color: #ffffff;
+  border-color: var(--apple-green);
+  box-shadow: 0 0 16px var(--apple-green-glow);
+}
+
+.nav-arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Page Layout */
+.apple-page-wrapper {
+  min-height: calc(100vh - 52px);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 40px 24px 32px;
+  padding: 48px 24px 32px;
   position: relative;
   z-index: 1;
 }
 
-/* Main Stage */
-.apple-stage {
-  width: 100%;
-  max-width: 1080px;
-  margin: auto auto;
+/* Hero Section */
+.apple-hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 52px;
 }
 
-/* Hero Section */
-.apple-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 48px;
-}
-
-/* Apple Squircle Icon Chassis */
-.apple-icon-chassis {
-  width: 108px;
-  height: 108px;
-  border-radius: 26px;
-  background: #000000;
-  position: relative;
-  overflow: hidden;
+.hero-brand-mark {
+  width: 88px;
+  height: 88px;
+  border-radius: 22px;
+  background: #000;
+  padding: 5px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 
+    0 12px 30px rgba(0, 0, 0, 0.85),
+    0 0 30px rgba(41, 151, 255, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px;
-  margin-bottom: 20px;
-  box-shadow: 
-    0 0 0 1px rgba(255, 255, 255, 0.15),
-    0 16px 40px rgba(0, 0, 0, 0.9),
-    0 0 35px rgba(41, 151, 255, 0.2);
-  transition: transform 0.4s var(--apple-easing), box-shadow 0.4s var(--apple-easing);
+  transition: transform 0.35s var(--apple-easing);
 }
 
-.apple-icon-chassis:hover {
-  transform: scale(1.03);
-  box-shadow: 
-    0 0 0 1px rgba(255, 255, 255, 0.25),
-    0 22px 50px rgba(0, 0, 0, 0.95),
-    0 0 45px rgba(41, 151, 255, 0.35);
+.hero-brand-mark:hover {
+  transform: scale(1.04);
 }
 
-.apple-brand-img {
+.hero-logo-img {
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 17px;
   object-fit: cover;
 }
 
-.chassis-shine {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 48%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
-  pointer-events: none;
-  border-top-left-radius: 26px;
-  border-top-right-radius: 26px;
-}
-
-/* Brand Typography */
-.apple-brand-name {
-  font-size: clamp(2.8rem, 5.5vw, 4.4rem);
-  font-weight: 700;
+.apple-hero-title {
+  font-size: clamp(3rem, 6vw, 4.8rem);
+  font-weight: 800;
   letter-spacing: -0.04em;
   color: var(--apple-text-primary);
-  line-height: 1.05;
+  line-height: 1;
   margin-bottom: 8px;
 }
 
-.apple-tagline {
-  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+.apple-hero-sub {
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
   font-weight: 400;
   letter-spacing: -0.015em;
   color: var(--apple-text-secondary);
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
-.apple-period {
+.accent-dot {
   color: var(--apple-cyan);
 }
 
-/* Apple Capsule Primary CTA */
-.apple-cta-container {
+.apple-hero-cta-wrap {
   display: flex;
   justify-content: center;
 }
 
-.apple-cta-capsule {
+.apple-hero-btn {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   background: var(--apple-green);
   color: #ffffff;
-  padding: 15px 30px;
+  padding: 14px 28px;
   border-radius: 980px;
   text-decoration: none;
   font-size: 1.05rem;
@@ -195,136 +237,113 @@ body {
   letter-spacing: -0.01em;
   box-shadow: 0 4px 22px var(--apple-green-glow);
   transition: all 0.3s var(--apple-easing);
-  cursor: pointer;
 }
 
-.apple-cta-capsule:hover {
+.apple-hero-btn:hover {
   background: var(--apple-green-hover);
-  transform: scale(1.025);
+  transform: scale(1.03);
   box-shadow: 0 8px 32px rgba(40, 205, 65, 0.55);
 }
 
-.capsule-icon {
-  font-size: 1.35rem;
-  display: flex;
-  align-items: center;
-}
-
-.capsule-label {
-  font-weight: 600;
-}
-
-.capsule-chevron {
-  font-size: 1.3rem;
+.btn-chevron {
+  font-size: 1.25rem;
   line-height: 1;
-  font-weight: 400;
-  opacity: 0.85;
-  transition: transform 0.25s var(--apple-easing);
+  transition: transform 0.2s var(--apple-easing);
 }
 
-.apple-cta-capsule:hover .capsule-chevron {
-  transform: translateX(4px);
-  opacity: 1;
+.apple-hero-btn:hover .btn-chevron {
+  transform: translateX(3px);
 }
 
-/* Apple Vision Pro Poster Cards Section */
-.apple-cards-section {
+/* Apple Carousel Section */
+.apple-carousel-section {
   width: 100%;
+  max-width: 1040px;
+  margin: 0 auto 40px;
 }
 
-.apple-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  width: 100%;
-}
-
-/* Poster Card (Text on Top of Photorealistic Real Images) */
-.apple-poster-card {
+.carousel-viewport {
   position: relative;
-  min-height: 400px;
-  border-radius: 28px;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 6px 2px;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  scroll-snap-align: center;
+}
+
+.slide-card {
+  position: relative;
+  min-height: 480px;
+  border-radius: 30px;
   overflow: hidden;
   border: 1px solid var(--apple-border);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
-  text-decoration: none;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.4s var(--apple-easing);
+  justify-content: flex-end;
+  background: #08080a;
 }
 
-.apple-poster-card:hover {
-  transform: translateY(-4px) scale(1.01);
-  border-color: var(--apple-border-hover);
-  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.85);
-}
-
-/* Full Background Image */
-.poster-bg-img {
+.slide-bg-img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.7s var(--apple-easing);
+  transition: transform 0.8s var(--apple-easing);
   z-index: 1;
 }
 
-.apple-poster-card:hover .poster-bg-img {
-  transform: scale(1.05);
+.slide-card:hover .slide-bg-img {
+  transform: scale(1.04);
 }
 
-/* Cinematic Apple Scrim / Gradient Overlay */
-.poster-overlay {
+.slide-scrim {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.94) 0%,
-    rgba(0, 0, 0, 0.6) 42%,
-    rgba(0, 0, 0, 0.25) 75%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
-  z-index: 2;
-  transition: background 0.4s var(--apple-easing);
-}
-
-.apple-poster-card:hover .poster-overlay {
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.96) 0%,
-    rgba(0, 0, 0, 0.5) 45%,
-    rgba(0, 0, 0, 0.15) 80%,
+    rgba(0, 0, 0, 0.6) 45%,
+    rgba(0, 0, 0, 0.2) 80%,
     rgba(0, 0, 0, 0.35) 100%
   );
+  z-index: 2;
 }
 
-/* Poster Card Content Layer */
-.poster-content {
+.slide-content {
   position: relative;
   z-index: 3;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 28px 30px;
+  padding: 44px 48px;
   text-align: left;
+  max-width: 720px;
 }
 
-/* Top Bar Inside Card */
-.poster-top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.poster-eyebrow {
-  font-size: 0.75rem;
+.slide-eyebrow {
+  font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  margin-bottom: 12px;
 }
 
 .text-cyan { color: var(--apple-cyan); }
@@ -332,101 +351,134 @@ body {
 .text-green { color: var(--apple-green); }
 .text-blue { color: var(--apple-blue); }
 
-.poster-wa-badge {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--apple-green);
-  font-size: 1.15rem;
-  transition: transform 0.3s var(--apple-easing), background 0.3s var(--apple-easing);
-}
-
-.apple-poster-card:hover .poster-wa-badge {
-  transform: scale(1.12);
-  background: rgba(40, 205, 65, 0.25);
-  border-color: rgba(40, 205, 65, 0.4);
-}
-
-/* Bottom Text Layered Directly Over Image */
-.poster-bottom-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.poster-title {
-  font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+.slide-title {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   color: #ffffff;
-  line-height: 1.15;
-  margin-bottom: 8px;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.6);
+  line-height: 1.1;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.65);
 }
 
-.poster-desc {
-  font-size: 0.92rem;
-  line-height: 1.45;
+.slide-desc {
+  font-size: 1.05rem;
+  line-height: 1.48;
   color: #d2d2d7;
   font-weight: 400;
-  margin-bottom: 20px;
-  max-width: 95%;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65);
+  margin-bottom: 24px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Apple Inverted CTA Pill */
-.poster-cta-row {
+.slide-action {
   display: flex;
 }
 
-.poster-cta-pill {
+.slide-cta-pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.16);
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   color: #ffffff;
-  padding: 8px 18px;
+  padding: 11px 22px;
   border-radius: 980px;
-  font-size: 0.86rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  text-decoration: none;
   transition: all 0.3s var(--apple-easing);
 }
 
-.poster-cta-pill .arrow {
-  font-size: 1.1rem;
-  line-height: 1;
-  transition: transform 0.2s var(--apple-easing);
-}
-
-.apple-poster-card:hover .poster-cta-pill {
+.slide-cta-pill:hover {
   background: #ffffff;
   color: #000000;
   border-color: #ffffff;
-  box-shadow: 0 4px 18px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 22px rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
 }
 
-.apple-poster-card:hover .poster-cta-pill .arrow {
+.slide-cta-pill i {
+  color: var(--apple-green);
+  transition: color 0.3s ease;
+}
+
+.slide-cta-pill:hover i {
+  color: #000000;
+}
+
+.slide-cta-pill .arrow {
+  font-size: 1.15rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.slide-cta-pill:hover .arrow {
   transform: translateX(3px);
+}
+
+/* Apple Carousel Controls */
+.carousel-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.carousel-nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--apple-border);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+  backdrop-filter: blur(12px);
+  transition: all 0.25s var(--apple-easing);
+}
+
+.carousel-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: scale(1.06);
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot-btn {
+  width: 28px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s var(--apple-easing);
+  padding: 0;
+}
+
+.dot-btn.active {
+  background: #ffffff;
+  width: 44px;
 }
 
 /* Apple Minimal Footer */
 .apple-footer {
   width: 100%;
-  padding-top: 36px;
+  padding-top: 24px;
 }
 
 .footer-content {
-  max-width: 1080px;
+  max-width: 1040px;
   margin: 0 auto;
   padding-top: 18px;
   border-top: 1px solid var(--apple-border);
@@ -461,33 +513,32 @@ body {
 }
 
 /* Responsiveness */
-@media (max-width: 860px) {
-  .apple-viewport {
-    padding: 32px 18px 24px;
+@media (max-width: 768px) {
+  .apple-page-wrapper {
+    padding: 32px 16px 20px;
   }
 
-  .apple-hero {
-    margin-bottom: 34px;
+  .apple-hero-section {
+    margin-bottom: 36px;
   }
 
-  .apple-icon-chassis {
-    width: 96px;
-    height: 96px;
-    border-radius: 22px;
-    margin-bottom: 16px;
+  .hero-brand-mark {
+    width: 76px;
+    height: 76px;
+    border-radius: 18px;
   }
 
-  .apple-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
+  .slide-card {
+    min-height: 420px;
+    border-radius: 24px;
   }
 
-  .apple-poster-card {
-    min-height: 350px;
+  .slide-content {
+    padding: 28px 24px;
   }
 
-  .poster-content {
-    padding: 24px 22px;
+  .slide-desc {
+    font-size: 0.95rem;
   }
 
   .footer-content {
@@ -499,21 +550,24 @@ body {
 }
 
 @media (max-width: 440px) {
-  .apple-brand-name {
-    font-size: 2.6rem;
+  .apple-hero-title {
+    font-size: 2.7rem;
   }
 
-  .apple-cta-capsule {
+  .slide-card {
+    min-height: 400px;
+  }
+
+  .slide-content {
+    padding: 22px 18px;
+  }
+
+  .slide-title {
+    font-size: 1.85rem;
+  }
+
+  .slide-cta-pill {
     width: 100%;
     justify-content: center;
-    padding: 15px 24px;
-  }
-
-  .apple-poster-card {
-    min-height: 330px;
-  }
-
-  .poster-title {
-    font-size: 1.6rem;
   }
 }
