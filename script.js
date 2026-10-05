@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Apple Carousel Logic
   const track = document.getElementById('carouselTrack');
   const slides = document.querySelectorAll('.carousel-slide');
-  const dots = document.querySelectorAll('.dot-btn');
+  const dots = document.querySelectorAll('.dot-dash, .dot-btn');
   const prevBtn = document.getElementById('prevSlideBtn');
   const nextBtn = document.getElementById('nextSlideBtn');
 
